@@ -18,22 +18,22 @@ public class LedgerController {
     private LedgerService ledgerService;
 
     @PostMapping
-    public Ledger create(@RequestBody ledger entry){
+    public Ledger create(@RequestBody Ledger entry){
         return ledgerService.createEntry(entry);
     }
 
     @GetMapping("/{id}")
     public Optional<Ledger> getById(@PathVariable Long id){
-        return ledgerService.getByid(id);
+        return ledgerService.getById(id);
     }
 
     @GetMapping("/account/{accountId}")
-    public List<Ledger> getByAccount(@PathVariable Long accId){
-        return ledgerService.getByAccount(accId);
+    public List<Ledger> getByAccount(@PathVariable Long id){
+        return ledgerService.getByAccount(id);
     }
 
     @GetMapping("/tx/{transactionId}")
-    public List<Ledger> getByTransaction(@PathVariable Long txid){
-        return ledgerService.getByTransaction(txid);
+    public List<Ledger> getByTransaction(@PathVariable Long id){
+        return ledgerService.getByTransaction(id);
     }
 };

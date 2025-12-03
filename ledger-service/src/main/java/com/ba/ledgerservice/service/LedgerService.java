@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ledgerservice {
+public class LedgerService {
 
     @Autowired
     private LedgerRepository ledgerRepo;
